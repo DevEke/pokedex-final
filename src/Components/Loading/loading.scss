@@ -1,0 +1,21 @@
+@import '../../App.scss';
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-contents {
+    .icon {
+        animation-name: loading;
+        animation-duration: .5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        font-size: 3em;
+        color: $border-color;
+    }
+}

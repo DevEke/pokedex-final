@@ -1,0 +1,57 @@
+@import '../../App.scss';
+@keyframes loading-item {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+.loading_item-wrapper {
+    height: 250px;
+    border-radius: 25px;
+    background-color: $border-color;
+    pointer-events: none;
+    animation-name: loading-item;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.item-wrapper {
+    height: 250px;
+    @include border-box();
+    border-radius: 25px;
+    padding: 1em;
+    @include column-center();
+    cursor: pointer;
+    &:hover {
+        border-color: #CDF3FF ;
+    }
+}
+
+.item-header {
+    display: flex;
+    align-items: baseline;
+    align-self: flex-start;
+    gap: .25em;
+    .item-id {
+        font-size: .75em;
+    }
+    .item-name {
+        text-transform: capitalize;
+        font-weight: 800;
+    }
+}
+
+.item-img {
+    @include column-center();
+    flex: 1;
+    .img {
+        height: 150px;
+    }
+}
